@@ -1,0 +1,3 @@
+name: ${project.archivesBaseName}
+main: ru.mor.iv.${project.packageVersion}.${project.archivesBaseName}
+version: ${project.version}

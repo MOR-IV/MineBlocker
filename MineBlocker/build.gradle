@@ -1,0 +1,43 @@
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile files ('libs/spigot-1.11.2.jar')
+    testCompile 'junit:junit:4.12'
+}
+
+project.version = '0.0.4'
+ext.packageVersion = project.archivesBaseName.toLowerCase()
+
+processResources.outputs.upToDateWhen {
+	 false 
+}
+
+processResources {
+	expand project.properties
+}
+
+task increment {
+    def v=buildFile.getText().find(project.version)
+    String minor=v.substring(v.lastIndexOf('.')+1)
+    int m=minor.toInteger()+1
+    String major=v.substring(0,v.length()-minor.length())
+    String s=buildFile.getText().replaceFirst("project.version = '$version'","project.version = '"+major+m+"'")
+    buildFile.setText(s)
+}
+
+
+
+task finalize << {
+    println 'copy File in to DevServer_1.11.2!!!'
+    copy {
+       from 'build/libs/' + jar.archiveName
+       into 'C:/Users/Admin/Desktop/ServerB/DevServer_1.11.2/plugins'
+    }
+}
+
+build.finalizedBy(finalize)
