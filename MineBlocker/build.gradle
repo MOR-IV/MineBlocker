@@ -10,7 +10,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-project.version = '0.0.4'
+project.version = '0.0.0'
 ext.packageVersion = project.archivesBaseName.toLowerCase()
 
 processResources.outputs.upToDateWhen {
