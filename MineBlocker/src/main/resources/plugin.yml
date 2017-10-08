@@ -1,3 +1,3 @@
-name: ${project.archivesBaseName}
-main: ru.mor.iv.${project.packageVersion}.${project.archivesBaseName}
+name: MineBlocker
+main: ru.mor.iv.mineblocker.MineBlockerPlugin
 version: ${project.version}
