@@ -1,1 +1,1 @@
-'{"status":"run","type":"all","buyRate":545000,"buyMin":9999,"buyMax":8000,"sellRate":590000,"sellMin":5000,"sellMax":9999,"pause":20000,"ignore":"null"}'
+{"status":"run","type":"all","buyRate":545000,"buyMin":9999,"buyMax":8000,"sellRate":590000,"sellMin":5000,"sellMax":9999,"pause":20000,"ignore":"null"}
